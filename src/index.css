@@ -163,7 +163,8 @@ h1{
 		  margin-left: 10%;
 	}
 	#img{
-		display: none;
+		margin-left: 17%;
+		width: 70vw;
 	}
 	.texto{
 		width: 100%;
@@ -189,6 +190,7 @@ h1{
 		margin-left: 0%;
 		font-size: 3vh;
 		text-align: justify;
+		margin-top: 50%;
 	}
 	#projetos{
 		max-width: 20%;
