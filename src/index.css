@@ -181,7 +181,7 @@ h1{
 	.texto2{
 		padding: 5%;
 		margin-left: 0%;
-		margin-top: 80%;
+		margin-top: 100%;
 		font-size: 3vh;
 		text-align: justify;
 	}
@@ -189,11 +189,11 @@ h1{
 		max-width: 20%;
 	}
 	.projeto img{
-		width: 90vw;
+		width: 70vw;
 	}
 	.no-project{
-		padding: 5vh 35vw;
-		width: 100%;
+		padding: 5vh 30vw;
+		width: 50%;
 	}
 	.no-project p{
 		font-size: 10vw;
