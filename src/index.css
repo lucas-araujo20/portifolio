@@ -145,7 +145,6 @@ h1{
 	}
 
 	.container{
-		padding: 0 10%;
 		width: 100vw;
 		flex-direction: column-reverse;
 		max-height: 100%;
@@ -161,7 +160,6 @@ h1{
 		  margin-bottom: 10%;
 	}
 	.texto{
-		margin-top: 10%;
 		width: 100%;
 		font-size: 70px;
 	}
@@ -188,7 +186,7 @@ h1{
 		text-align: justify;
 	}
 	#projetos{
-		max-width: 15%;
+		max-width: 20%;
 	}
 	.projeto img{
 		width: 90vw;
