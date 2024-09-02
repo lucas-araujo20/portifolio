@@ -237,6 +237,8 @@ div + h1 {
 @media (max-width: 1000px) {
     .menu {
         position: relative;
+        width: 117%;
+        margin-left: -10%;
     }
 
     .menu ul {
@@ -256,7 +258,12 @@ div + h1 {
     .icones{
         margin-top: 10%;
     }
-
+    #cont-sobre{
+        flex-direction: column-reverse;
+    }
+    #img{
+        margin-bottom: -20%;
+    }
     /* Ajuste para a classe .skills em telas menores */
     .skills {
         display: block; /* Empilha os itens verticalmente */
