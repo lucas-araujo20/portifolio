@@ -1,218 +1,288 @@
-html,body{
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	max-width: 100vw;
-	max-height: 100vh;
-}
-.menu{
-	display: flex;
-	width: 100%;
-	height: 9%;
-	background-color: #02a9f4;
-	align-items: center;
-	justify-content: space-between;	
-}
-.menu p{
-	margin-left: 7%;
-	font-size: 30px;
-	color: white;
-	font-weight: bold;
-	font-style: italic;
-}
-.menu > ul{
-	margin: 0;
-	margin-right: 5%;
-	padding: 0;	
-}
-a{
-	text-decoration: none;
-}
-a:hover{
-	opacity: 70%;
-}
-.menu > ul > a > li{
-	display: inline;
-	font-size: 4vh;
-	margin-right: 20px;
-	color: white;
-	font-weight: bold;
-}
-.container{
-	display: flex;
-	max-height: 70%;
-	justify-content: center;
-}
-.child{
-	max-width: 48%;
-}
-.child > img{
-	  width: 25vw;
-	  margin-top: 20%;
-}
-#img{
-	width: 25vw;
-	margin-top: 20%;
-}
-.texto{
-	font-size: 12vh;
-	padding-right: 30%;
-	margin-bottom: -20px;
-}
-.sub-txt, .child span{
-	color: #02a9f4;
-
-	font-weight: bold;
-}
-.sub-txt{
-	font-size: 4vh;	
-}
-.icones{
-	display: flex;
-}
-.icones img{
-	width: 4vw;
-	margin-right: 10px;
-}
-h1{
-	text-align: center;
-	font-size: 3vw;
-}
-.texto2{
-	margin-left: 20%;
-	margin-top: 10%;
-	font-size: 3.5vh;
-	text-align: justify;
-}
-.skills{
-	margin-left: 6%;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	max-width: 90%;
-}
-.skills p{
-	border: 1px solid;
-	border-radius: 40px;
-	border-color: #02a9f4;
-	background-color: #02a9f4;
-	color: white;
-	width: 150px;
-	cursor: default;
-	height: 40px;
-	padding-top: 15px;
-	text-align: center;
-	margin-right: 10px;
-	font-weight: bold;
-	font-size: 20px;
-}
-#projetos{
-	margin-left: 10%;
-	display: flex;
-	max-width: 90%;
-	flex-wrap: wrap;
-}
-.projeto{
-	border: 1px solid;
-	border-color: #02a9f4;
-	background-color: #02a9f4;
-	margin-right: 20px;
-	margin-bottom: 50px;
-	padding-bottom: 2%;
-}
-.projeto, .no-project p{
-	text-align: center;
-	color: white;
-	font-weight: bold;
-	font-size: 30px;
-}
-.projeto img{
-	width: 25vw;
-	height: 25vh;
-}
-.no-project{
-	display: flex;
-	border: 1px solid;
-	cursor: default;
-	border-color: #02a9f4;
-	background-color: #02a9f4;
-	margin-right: 20px;
-	margin-bottom: 50px;
-	width: 30%;
-	align-items: center;
-	justify-content: center;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media screen and (max-width:1000px){
-	.options{
-		display: none;
-	}
-	html,body{
-		width: 100%;
-		max-width: 100vw;
-	}
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    padding-top: 0; /* Remover o espaçamento superior */
+}
 
-	.container{
-		width: 100vw;
-		flex-direction: column-reverse;
-		max-height: 100%;
-		justify-content: center;
-		margin-bottom: 100%;
-	}
-	.child{
-		max-width: 100%;
-	}
-	.child > img{
-		  width: 80vw;
-		  margin-left: 10%;
-	}
-	#img{
-		margin-left: 25%;
-		width: 70vw;
+/* Menu de navegação */
+.menu {
+    background-color: #007bff; /* Azul */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Alinha os elementos do menu na mesma linha */
+    align-items: center; /* Centraliza verticalmente */
+}
 
-	}
-	.texto{
-		width: 100%;
-		font-size: 70px;
-	}
-	.sub-txt{
-		font-size: 4vh;	
-	}
-	.icones{
-		display: flex;
-		margin-left: 5%;
-		margin-bottom: -80%;
-	}
-	.icones img{
-		width: 25vw;
-		margin-right: 20px;
-	}
-	h1{
-		font-size: 10vw;
-	}
-	.texto2{
-		padding: 5%;
-		margin-left: 0%;
-		font-size: 3vh;
-		text-align: justify;
-		margin-top: 120%;
-	}
-	#projetos{
-		max-width: 20%;
-		margin-left: 15%;
-	}
-	.projeto img{
-		width: 70vw;
-	}
-	.no-project{
-		padding: 5vh 30vw;
-		width: 50%;
-	}
-	.no-project p{
-		font-size: 10vw;
-	}
-	.skills{
-		margin-bottom: 20%;
-	}
-	}
+.menu p {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 20px; /* Margem para afastar do lado esquerdo */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Exibe os itens na mesma linha */
+    margin-right: 20px; /* Margem para afastar do lado direito */
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menu ul li:hover {
+    color: #ff5733;
+}
+
+/* Botão do menu lateral */
+.menu .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Menu lateral */
+.options {
+    display: flex;
+    list-style: none;
+}
+
+.options a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.options li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Margin aumentada para divs antes de um h1 */
+div + h1 {
+    margin-top: 20vh; /* Aumenta a margem vertical para 20% da altura da viewport */
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20vh; /* Espaçamento vertical */
+    margin-left: 10%; /* Espaçamento horizontal */
+    margin-right: 10%; /* Espaçamento horizontal */
+}
+
+.child {
+    flex: 1;
+    margin: 10px;
+    max-width: 400px; /* Ajustado para diminuir o tamanho das imagens */
+}
+
+.child img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Texto principal */
+.texto {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.texto span {
+    color: #007bff; /* Azul para todas as tags span */
+}
+
+.sub-txt {
+    font-size: 24px;
+    color: #777;
+}
+
+/* Ícones */
+.icones a {
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.icones a img {
+    width: 40px;
+    height: 40px;
+}
+
+.icones a:hover {
+    transform: scale(1.2);
+}
+
+/* Sobre Mim */
+#cont-sobre {
+    margin-top: 20px;
+}
+
+.texto2 {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify; /* Texto justificado */
+}
+
+.texto2 span {
+    font-weight: bold;
+    color: #007bff; /* Azul para todas as tags span */
+}
+
+/* Habilidades */
+.skills {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 10%; /* Espaçamento horizontal nas margens laterais */
+}
+
+.skills p {
+    background-color: #007bff; /* Azul */
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease;
+}
+
+.skills p:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+}
+
+/* Projetos */
+#projetos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 10%; /* Espaçamento horizontal */
+    margin-right: 10%; /* Espaçamento horizontal */
+}
+
+.projeto, .no-project {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 250px;
+    min-height: 250px; /* Define a mesma altura mínima */
+    width: 100%; /* Garante que a largura seja igual */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projeto img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.projeto p, .no-project p {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.projeto a, .no-project a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.projeto:hover, .no-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 1000px) {
+    .menu {
+        position: relative;
+        width: 117%;
+        margin-left: -10%;
+    }
+
+    .menu ul {
+        display: none; /* Esconde o menu padrão em telas menores */
+    }
+
+    .menu .menu-toggle {
+        display: block; /* Exibe o botão do menu lateral */
+    }
+
+    .options {
+        display: none; /* Oculta o menu lateral */
+    }
+    .sub-txt{
+        font-size: 22px;
+    }
+    .icones{
+        margin-top: 10%;
+    }
+    #cont-sobre{
+        flex-direction: column-reverse;
+    }
+    #img{
+        margin-bottom: -20%;
+    }
+    /* Ajuste para a classe .skills em telas menores */
+    .skills {
+        display: block; /* Empilha os itens verticalmente */
+        margin: 20px 5%; /* Reduzido o espaçamento horizontal */
+    }
+
+    .skills p {
+        margin: 10px auto; /* Centraliza os itens */
+        width: 60%;
+        text-align: center;
+    }
+
+    /* Ajuste para a classe .container em telas menores */
+    .container {
+        flex-direction: column; /* Empilha as divs verticalmente */
+        align-items: center; /* Centraliza as divs horizontalmente */
+        margin-top: 5vh; /* Reduz ainda mais o espaçamento vertical para ficar mais próximo do menu */
+    }
+    .projeto, .no-project{
+        width: 90%;
+    }
 }
